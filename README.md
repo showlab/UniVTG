@@ -1,7 +1,8 @@
  # UniVTG
 > TL; DR: The first video temporal grounding pretraining model, unifying diverse temporal annotations to power moment retrieval (interval), highlight detection (curve) and video summarization (point).
 
-![UniVTG](figures/univtg_pipeline.jpg)
+<img src="figures/univtg_demo.jpg" alt="UniVTG" width="50%">
+
 
 ### **News**
 <!--  -->
@@ -19,7 +20,7 @@ To power practical usage, we release the following checkpoints:
 Additionally, we've built gradio interfaces for easy interaction. 
 Run `python3 main_gradio.py`
 
-![UniVTG](figures/gradio.png)
+<img src="figures/gradio.png" alt="UniVTG" width="50%">
 
 
 ## ⚙️ Preparation
