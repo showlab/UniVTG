@@ -79,4 +79,4 @@ cat vid_slowfast_* > vid_slowfast.tar
    └── ···
    ```
 
-4. (Optional) We extract video features (Slowfast R/50 and CLIP B/16) based on this repo: [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), you can use it extract other benchmarks or videos; We extract text features (CLIP B/16) by `utils/txt_clip.py`
+4. (Optional) We extract video features (Slowfast R/50 and CLIP B/16) based on this repo: [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), you can use it extract other benchmarks or videos; We extract text features (CLIP B/16) by `run_on_video/text_extractor.py`
