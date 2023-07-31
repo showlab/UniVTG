@@ -1,0 +1,14 @@
+{
+  // "max_segment_num": 20,
+  // "max_frame_num": 200,
+
+  // "train_videos": null,
+  // "test_videos": null,
+  // "top_percent": 0.02,
+
+  // "vid_feature": "fps1",
+  // "txt_feature": "query",
+  // "txt_max_len": 5,
+
+  // "factor": null
+}
