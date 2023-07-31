@@ -19,7 +19,7 @@ To power practical usage, we release the following checkpoints:
 Download it and put it to dir `results/omni`.
 
 Additionally, we've built gradio interfaces for easy interaction. 
-Run `python3 main_gradio.py`
+Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
 
 <img src="figures/gradio.png" alt="UniVTG" width="50%">
 
