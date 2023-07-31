@@ -11,11 +11,12 @@
 ## 🌟 Run on your videos
 To power practical usage, we release the following checkpoints:
 
-| Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Download |
+| Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Checkpoints |
 | ------------------ |  ------------------ | ------------------ | ------- | ---- |
-| CLIP-Base | CLIP-Base | 4M      | -      |   [Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
-| CLIP-Base | CLIP-Base | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
+| CLIP-B/16 | CLIP-B/16 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
+| CLIP-B/16 | CLIP-B/16 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
 
+Download it and put it to dir `results/omni`.
 
 Additionally, we've built gradio interfaces for easy interaction. 
 Run `python3 main_gradio.py`
