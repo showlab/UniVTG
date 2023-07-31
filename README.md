@@ -15,7 +15,7 @@ To power practical usage, we release the following checkpoints:
 | CLIP-B/16 | CLIP-B/16 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
 | CLIP-B/16 | CLIP-B/16 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
 
-Download it and put it to the dir `results/omni`.
+Download and put it to the dir `results/omni`.
 
 Additionally, we've built gradio interfaces for easy interaction. 
 Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
