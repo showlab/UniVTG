@@ -19,7 +19,7 @@ we release the following checkpoints:
 
 Additionally, we've built gradient interfaces for easy interaction. Run `python3 main_gradio.py`
 
-![UniVTG](figures/gradio_example.png)
+![UniVTG](figures/gradio.png)
 
 
 ## 🔨 Preparation
