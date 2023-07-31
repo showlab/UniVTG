@@ -1,8 +1,7 @@
  # UniVTG
 > TL; DR: The first video temporal grounding pretraining model, unifying diverse temporal annotations to power moment retrieval (interval), highlight detection (curve) and video summarization (point).
 
-<img src="figures/univtg_demo.jpg" alt="UniVTG" width="75%">
-
+![UniVTG](figures/univtg_demo.jpg)
 
 ### 📢 News
 <!--  -->
