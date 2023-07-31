@@ -4,7 +4,7 @@
 ![UniVTG](figures/univtg_demo.jpg)
 
 
-### **News**
+### 📢 News
 <!--  -->
 - [2023.7.31] We release the codes, checkpoints and gradio demo.
 
