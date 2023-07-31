@@ -82,7 +82,7 @@ mv data/home/qinghonglin/univtg/data/{dset_name}/* .
 
 
 ### Model Zoo
-TBD
+stay tunned, will be released soon!
 
 ## Acknowledgement
 
