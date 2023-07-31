@@ -7,84 +7,30 @@
 <!--  -->
 - [2023.7.31] We release the codes, checkpoints and gradio demo.
 
-## 🌟 Run on your examples
-To power practical usage (e.g., efficiently grounding on own videos), 
-we release the following checkpoints:
+## 🌟 Run on your videos
+To power practical usage, we release the following checkpoints:
 
-| Video Enc.  | Text Enc.  | Pretraining            | Fine-tuned   |  Download |
+| Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Download |
 | ------------------ |  ------------------ | ------------------ | ------- | ---- |
-| CLIP-B | CLIP-B | 4M      | -      |   [Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
-| CLIP-B | CLIP-B | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
+| CLIP-Base | CLIP-Base | 4M      | -      |   [Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
+| CLIP-Base | CLIP-Base | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
 
 
-Additionally, we've built gradient interfaces for easy interaction. Run `python3 main_gradio.py`
+Additionally, we've built gradio interfaces for easy interaction. 
+Run `python3 main_gradio.py`
 
 ![UniVTG](figures/gradio.png)
 
 
-## 🔨 Preparation
+## ⚙️ Preparation
 
-### Environment
+Please find instructions in [install.md](install.md) to setup environment and datasets.
 
-```bash
-git clone https://github.com/showlab/UniVTG
-cd UniVTG
+## 📦 Model Zoo
 
-conda create --name univtg python=3.8
-pip install -r requirements.txt
-```
+Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 
-### Datasets
-
-TBD
-
-<!-- 1.  Download the necessary files for pertaining and downstream datasets. (If you don't need pretraining, just download the downstream one).
-
-| Dataset            | Task    |  GDrive |
-| ------------------ | ------- | ---- |
-| Point (Ego4D)      | PT      |      |
-| Interval (VideoCC) | PT      |      |
-| Curve (VideoCC)    | PT      |      |
-| QVHighlights       | MR + HL |      |
-| Charades-STA       | MR      |      |
-| NLQ                | MR      |      |
-| TACoS              | MR      |      |
-| YoutubeHL          | HL      |      |
-| TVSum              | HL      |      |
-| QFVS               | VS      |      |
-
-Unzip the downloaded tar
-
-```
-tar -xvf qfvs.tar
-mv data/home/qinghonglin/univtg/data/{dset_name}/* .
-```
-
-2. Prepare the dataset in the following structur
-   ```bash
-   univtg
-   ├── eval
-   ├── data
-   │   └── qvhighlights
-   │       ├── metadata
-   │       │   ├──qvhighlights_test.jsonl
-   │       │   ├──qvhighlights_train.jsonl
-   │       │   └──qvhighlights_val.jsonl
-   │       ├── txt_clip
-   │       ├── vid_clip
-   │       └── vid_slowfast
-   ├── main
-   ├── model
-   ├── utils
-   ├── README.md
-   └── ···
-   ``` -->
-
-
-### Model Zoo
-stay tunned, will be released soon!
-
-## Acknowledgement
+## 😊 Acknowledgement
 
 This codebase is based on [moment_detr](https://github.com/jayleicn/moment_detr), [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), [UMT](https://github.com/tencentarc/umt).
 
