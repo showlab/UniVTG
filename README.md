@@ -33,6 +33,20 @@ Please find instructions in [install.md](install.md) to setup environment and da
 
 Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 
+## 🎓 Citation
+If you find our work helps, please cite our paper.
+
+```
+@misc{lin2023univtg,
+      title={UniVTG: Towards Unified Video-Language Temporal Grounding}, 
+      author={Kevin Qinghong Lin and Pengchuan Zhang and Joya Chen and Shraman Pramanick and Difei Gao and Alex Jinpeng Wang and Rui Yan and Mike Zheng Shou},
+      year={2023},
+      eprint={2307.16715},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
 ## 😊 Acknowledgement
 
 This codebase is based on [moment_detr](https://github.com/jayleicn/moment_detr), [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), [UMT](https://github.com/tencentarc/umt).
