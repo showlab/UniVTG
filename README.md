@@ -1,11 +1,13 @@
  # UniVTG
+ [[arXiv]](https://arxiv.org/abs/2307.16715)
+ 
 > TL; DR: The first video temporal grounding pretraining model, unifying diverse temporal annotations to power moment retrieval (interval), highlight detection (curve) and video summarization (point).
 
 ![UniVTG](figures/univtg_demo.jpg)
 
 ### 📢 News
 <!--  -->
-- [2023.7.31] We release the codes, checkpoints and gradio demo.
+- [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
 ## 🌟 Run on your videos
 To power practical usage, we release the following checkpoints:
