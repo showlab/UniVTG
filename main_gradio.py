@@ -6,7 +6,7 @@ import gradio as gr
 import numpy as np
 import argparse
 import subprocess
-from feature_extractor import clip, vid2clip, txt2clip
+from run_on_video import clip, vid2clip, txt2clip
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--save_dir', type=str, default='./tmp')
