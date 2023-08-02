@@ -1,4 +1,4 @@
- # UniVTG
+ # UniVTG (ICCV'23)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/univtg-towards-unified-video-language/highlight-detection-on-qvhighlights)](https://paperswithcode.com/sota/highlight-detection-on-qvhighlights?p=univtg-towards-unified-video-language) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/univtg-towards-unified-video-language/moment-retrieval-on-qvhighlights)](https://paperswithcode.com/sota/moment-retrieval-on-qvhighlights?p=univtg-towards-unified-video-language)
 
  [[arXiv]](https://arxiv.org/abs/2307.16715)
