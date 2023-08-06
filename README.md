@@ -9,6 +9,7 @@
 
 ### 📢 News
 <!--  -->
+- [2023.8.6] Update the gradio demo.
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
 ## 🌟 Run on your videos
@@ -24,8 +25,13 @@ Download and put it to the dir `results/omni`.
 Additionally, we've built gradio interfaces for easy interaction. 
 Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
 
-<img src="figures/gradio.png" alt="UniVTG" width="50%">
+<details open><summary>[ Youtube video ]</summary><img src="./figures/case1.jpg" alt="Youtube video" style="width: 100%; height: auto;">
+</details>
+<details open><summary>[ Charades video  ]</summary><img src="./figures/case2.jpg" alt="Charades video" style="width: 100%; height: auto;">
+</details>
 
+<details open><summary>[ Egocentric video ]</summary><img src="./figures/case3.jpg" alt="Egocentric video" style="width: 100%; height: auto;">
+</details>
 
 ## ⚙️ Preparation
 
