@@ -108,6 +108,7 @@ class Model(nn.Module):
         src_txt = self.input_txt_proj(src_txt)
         if src_cls is not None:
             src_cls = self.input_txt_proj(src_cls)
+        device_id = src_vid.device
 
         # type token.
         src_vid = src_vid + self.token_type_embeddings(torch.full_like(src_vid_mask.long(), 1))
@@ -130,7 +131,7 @@ class Model(nn.Module):
 
         if self.span_loss_type == "l1":
             outputs_coord = outputs_coord.sigmoid()
-            idx_mask = torch.tensor((-1, 1)).unsqueeze(0).unsqueeze(0).cuda()
+            idx_mask = torch.tensor((-1, 1)).unsqueeze(0).unsqueeze(0).to(device_id)
             idx_mask = idx_mask.repeat(outputs_coord.shape[0], outputs_coord.shape[1], 1)
             outputs_coord = outputs_coord * idx_mask
         else:
