@@ -10,7 +10,10 @@ from run_on_video import clip, vid2clip, txt2clip
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--save_dir', type=str, default='./tmp')
+parser.add_argument('--resume', type=str, default='./results/omni/model_best.ckpt')
+parser.add_argument("--gpu_id", type=int, default=2)
 args = parser.parse_args()
+os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu_id)
 
 #################################
 model_version = "ViT-B/32"
@@ -20,8 +23,7 @@ overwrite = True
 num_decoding_thread = 4
 half_precision = False
 
-clip_model, _ = clip.load(model_version, device="cuda", jit=False)
-
+clip_model, _ = clip.load(model_version, device=args.gpu_id, jit=False)
 
 import logging
 import torch.backends.cudnn as cudnn
@@ -35,7 +37,7 @@ logging.basicConfig(format="%(asctime)s.%(msecs)03d:%(levelname)s:%(name)s - %(m
 
 def load_model():
     logger.info("Setup config, data and model...")
-    opt = TestOptions().parse()
+    opt = TestOptions().parse(args)
     # pdb.set_trace()
     cudnn.benchmark = True
     cudnn.deterministic = False
@@ -77,8 +79,13 @@ def load_data(save_dir):
 
     return src_vid, src_txt, src_vid_mask, src_txt_mask, timestamp, ctx_l
 
-def forward(model, save_dir):
+def forward(model, save_dir, query):
     src_vid, src_txt, src_vid_mask, src_txt_mask, timestamp, ctx_l = load_data(save_dir)
+    src_vid = src_vid.cuda(args.gpu_id)
+    src_txt = src_txt.cuda(args.gpu_id)
+    src_vid_mask = src_vid_mask.cuda(args.gpu_id)
+    src_txt_mask = src_txt_mask.cuda(args.gpu_id)
+    
     with torch.no_grad():
         output = model(src_vid=src_vid, src_txt=src_txt, src_vid_mask=src_vid_mask, src_txt_mask=src_txt_mask)
     
@@ -96,20 +103,27 @@ def forward(model, save_dir):
     top5_values, top5_indices = torch.topk(pred_confidence.flatten(), k=5)
     top5_windows = pred_windows[top5_indices].tolist()
     
-    print(f"The video duration is {convert_to_hms(src_vid.shape[1]*clip_len)}.")
+    # print(f"The video duration is {convert_to_hms(src_vid.shape[1]*clip_len)}.")
+    q_response = f"For query: {query}"
+
+    mr_res =  " - ".join([convert_to_hms(int(i)) for i in top1_window])
+    mr_response = f"The Top-1 interval is: {mr_res}"
     
-    print("top1 mr")
-    # print([convert_to_hms(int(i)) for i in top1_window])
-    res = [convert_to_hms(int(i)) for i in top1_window]
-    return str(res)
+    hl_res = convert_to_hms(torch.argmax(pred_saliency) * clip_len)
+    hl_response = f"The Top-1 highlight is: {hl_res}"
+    return '\n'.join([q_response, mr_response, hl_response])
     
-def extract_vid(vid_path):
+def extract_vid(vid_path, state):
+    history = state['messages']
     vid_features = vid2clip(clip_model, vid_path, args.save_dir)
-    return vid_features
+    history.append({"role": "user", "content": "Finish extracting video features."}) 
+    history.append({"role": "system", "content": "Please Enter the text query."}) 
+    chat_messages = [(history[i]['content'], history[i+1]['content']) for i in range(0, len(history),2)]
+    return '', chat_messages, state
 
 def extract_txt(txt):
-    txt_features = txt2clip(clip_model, txt)
-    return txt_features
+    txt_features = txt2clip(clip_model, txt, args.save_dir)
+    return
 
 def download_video(url, save_dir='./examples', size=768):
     save_path = f'{save_dir}/{url}.mp4'
@@ -137,7 +151,7 @@ def submit_message(prompt, state):
         # answer = vlogger.chat2video(prompt)
         # answer = prompt
         extract_txt(prompt)
-        answer = forward(vtg_model, args.save_dir)
+        answer = forward(vtg_model, args.save_dir, prompt)
         history.append({"role": "system", "content": answer}) 
 
     except Exception as e:
@@ -175,30 +189,33 @@ with gr.Blocks(css=css) as demo:
 
 
     with gr.Column(elem_id="col-container"):
-        gr.Markdown("""##  UniVTG: Towards Unified Video-Language Temporal Grounding""",
+        gr.Markdown("""## 🤖️ UniVTG: Towards Unified Video-Language Temporal Grounding
+                    Given a video and text query, return relevant window and highlight.""",
                     elem_id="header")
 
         with gr.Row():
             with gr.Column():
                 video_inp = gr.Video(label="video_input")
-                gr.Markdown("Input youtube video_id in this textbox, *e.g.* *G7zJK6lcbyU*", elem_id="hint")
+                gr.Markdown("👋 **Step1**: Select a video in Examples (bottom) or input youtube video_id in this textbox, *e.g.* *G7zJK6lcbyU* for https://www.youtube.com/watch?v=G7zJK6lcbyU", elem_id="hint")
                 with gr.Row():
                     video_id = gr.Textbox(value="", placeholder="Youtube video url", show_label=False)
-                    vidsub_btn = gr.Button("Submit Youtube video")
+                    vidsub_btn = gr.Button("(Optional) Submit Youtube id")
+
+            with gr.Column():
+                vid_ext = gr.Button("Step2: Extract video feature, may takes a while")
+                # vlog_outp = gr.Textbox(label="Document output", lines=40)
+                total_tokens_str = gr.Markdown(elem_id="total_tokens_str")
                 
                 chatbot = gr.Chatbot(elem_id="chatbox")
                 input_message = gr.Textbox(show_label=False, placeholder="Enter text query and press enter", visible=True).style(container=False)
-                btn_submit = gr.Button("Submit")
+                btn_submit = gr.Button("Step3: Enter your text query")
                 btn_clear_conversation = gr.Button("🔃 Clear")
-            
-            with gr.Column():
-                vid_ext = gr.Button("Extract Video Feature")
-                # vlog_outp = gr.Textbox(label="Document output", lines=40)
-                total_tokens_str = gr.Markdown(elem_id="total_tokens_str")
 
         examples = gr.Examples(
             examples=[
-                ["./videos/youtube.mp4"],
+                ["./examples/youtube.mp4"], 
+                ["./examples/charades.mp4"], 
+                ["./examples/ego4d.mp4"],
             ],
             inputs=[video_inp],
         )
@@ -209,11 +226,11 @@ with gr.Blocks(css=css) as demo:
     input_message.submit(submit_message, [input_message, state], [input_message, chatbot])
     # btn_clear_conversation.click(clear_conversation, [], [input_message, video_inp, chatbot, vlog_outp, state])
     btn_clear_conversation.click(clear_conversation, [], [input_message, video_inp, chatbot, state])
-    vid_ext.click(extract_vid, [video_inp], [])
+    vid_ext.click(extract_vid, [video_inp, state], [input_message, chatbot])
     vidsub_btn.click(subvid_fn, [video_id], [video_inp])
 
     demo.load(queur=False)
 
 
 demo.queue(concurrency_count=10)
-demo.launch(height='800px', server_port=9912, debug=True, share=True)
+demo.launch(height='800px', server_port=2253, debug=True, share=True)
