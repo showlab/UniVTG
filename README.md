@@ -62,6 +62,9 @@ If you find our work helps, please cite our paper.
 }
 ```
 
+## ✉️ Contact
+This repo is maintained by [Kevin](https://qinghonglin.github.io/). Questions and discussions are welcome via kevin.qh.lin@gmail.com.
+
 ## 😊 Acknowledgement
 
 This codebase is based on [moment_detr](https://github.com/jayleicn/moment_detr), [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), [UMT](https://github.com/tencentarc/umt).
