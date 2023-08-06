@@ -11,6 +11,7 @@
 
 > For below downstream tasks, checkpoints are trained by Slowfast R50 + CLIP-B/16 features.
 
+
 ## Joint Moment Retrieval and Highlight Detection
 | Datasets  | (MR) mAP avg | (HD) HIT@1 | Checkpoints |
 | ------------------ |  ------------------ | ------------------ | ------------------ | 
@@ -32,15 +33,15 @@
 ## Highlight Detection
 | Datasets  | Domain | mAP | Checkpoints |
 | ------------------ |  ------------------ | ------------------ | ------------------ | 
-| Youtube Highlights |  
-| Youtube Highlights |  
-| TVSum |  
-| TVSum |  
+| Youtube Highlights |  | | TBD | 
+| Youtube Highlights |  |  | TBD | 
+| TVSum |  |  | TBD | 
+| TVSum |  |  | TBD | 
 
 ## Video Summarization
 | Datasets  | F1 score | Checkpoints |
 | ------------------ |  ------------------ | ------------------ | 
-| V1 |  49.85  |
-| V2 |  56.97  |
-| V3 |  59.35 |
-| V4 | 40.62 |
+| V1 |  49.85   | TBD | 
+| V2 |  56.97   | TBD | 
+| V3 |  59.35  | TBD | 
+| V4 | 40.62  | TBD | 
