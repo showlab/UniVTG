@@ -156,7 +156,6 @@ nbformat==5.5.0
 nest-asyncio==1.5.5
 networkx==2.8.7
 nh3==0.2.13
-nltk==3.7
 nncore==0.3.6
 notebook==6.4.12
 numexpr==2.8.4
