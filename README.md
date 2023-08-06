@@ -63,7 +63,7 @@ If you find our work helps, please cite our paper.
 ```
 
 ## ✉️ Contact
-This repo is maintained by [Kevin](https://qinghonglin.github.io/). Questions and discussions are welcome via kevin.qh.lin@gmail.com.
+This repo is maintained by [Kevin](https://qinghonglin.github.io/). Questions and discussions are welcome via kevin.qh.lin@gmail.com or open an issue.
 
 ## 😊 Acknowledgement
 
