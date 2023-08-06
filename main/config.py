@@ -212,11 +212,20 @@ class BaseOptions(object):
             option_file_path = os.path.join(opt.results_dir, self.saved_option_filename)  # not yaml file indeed
             save_json(args, option_file_path, save_pretty=True)
 
-    def parse(self):
+    def parse(self, args=None):
         if not self.initialized:
             self.initialize()
         opt = self.parser.parse_args()
-
+        
+        if args is not None:
+            args_dict = vars(args)
+            opt_dict = vars(opt)
+            for key, value in args_dict.items():
+                opt_dict[key] = value
+            opt = argparse.Namespace(**opt_dict)    
+            opt.model_dir = os.path.dirname(opt.resume)
+            torch.cuda.set_device(opt.gpu_id)
+            
         if opt.debug:
             opt.results_root = os.path.sep.join(opt.results_root.split(os.path.sep)[:-1] + ["debug_results", ])
             opt.num_workers = 0
@@ -228,7 +237,7 @@ class BaseOptions(object):
             saved_options = load_json(os.path.join(opt.model_dir, self.saved_option_filename))
             for arg in saved_options:  # use saved options to overwrite all BaseOptions args.
                 if arg not in ["results_root", "num_workers", "nms_thd", "debug",  "max_before_nms", "max_after_nms"
-                               "max_pred_l", "min_pred_l", 
+                               "max_pred_l", "min_pred_l", "gpu_id",
                                "resume", "resume_all", "no_sort_results",
                                "eval_path", "eval_split_name"]:
                             #    "dset_name", "v_feat_dirs", "t_feat_dir"]:
@@ -334,8 +343,8 @@ def setup_model(opt):
 
     if int(opt.device) >= 0:
         logger.info("CUDA enabled.")
-        model.to("cuda")
-        criterion.to("cuda")
+        model.to(opt.gpu_id)
+        criterion.to(opt.gpu_id)
 
     param_dicts = [{"params": [p for n, p in model.named_parameters() if p.requires_grad]}]
     optimizer = torch.optim.AdamW(param_dicts, lr=opt.lr, weight_decay=opt.wd)
