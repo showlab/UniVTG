@@ -93,7 +93,6 @@ GitPython==3.1.31
 gradio==3.23.0
 greenlet==2.0.2
 grpcio==1.56.2
-grpcio-status==1.56.2
 h11==0.14.0
 h5py==3.7.0
 httpcore==0.16.3
@@ -184,7 +183,6 @@ openapi-schema-pydantic==1.2.4
 opencv-python==4.5.4.58
 openpyxl==3.1.2
 orjson==3.9.1
-ortools==9.4.1874
 packaging==21.3
 pandas==1.5.2
 pandocfilters==1.5.0
@@ -206,7 +204,6 @@ prices==1.1.1
 proglog==0.1.10
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
-proto-plus==1.22.3
 psutil==5.9.2
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -329,4 +326,4 @@ yacs==0.1.8
 yarl==1.9.2
 yt-dlp==2023.3.4
 zipp==3.8.1
-protobuf===4.21.6
+protobuf===3.9.2
