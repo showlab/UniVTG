@@ -90,16 +90,6 @@ geographiclib==2.0
 geopy==2.3.0
 gitdb==4.0.10
 GitPython==3.1.31
-google-api-core==2.11.1
-google-api-python-client==2.95.0
-google-auth==2.22.0
-google-auth-httplib2==0.1.0
-google-auth-oauthlib==0.4.6
-google-cloud==0.34.0
-google-cloud-vision==3.4.4
-google-measurement-protocol==1.1.0
-googleapis-common-protos==1.59.1
-googletransx==2.4.2
 gradio==3.23.0
 greenlet==2.0.2
 grpcio==1.56.2
@@ -217,7 +207,6 @@ proglog==0.1.10
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
 proto-plus==1.22.3
-protobuf==3.20.1
 psutil==5.9.2
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -338,6 +327,6 @@ xlrd==2.0.1
 XlsxWriter==3.1.2
 yacs==0.1.8
 yarl==1.9.2
-youtube-dl==2021.12.17
 yt-dlp==2023.3.4
 zipp==3.8.1
+protobuf===4.21.6
