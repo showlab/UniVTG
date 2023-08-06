@@ -25,6 +25,8 @@ Download and put it to the dir `results/omni`.
 Additionally, we've built gradio interfaces for easy interaction. 
 Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
 
+Download the example videos from [here](https://drive.google.com/drive/folders/1TpMYRmdAx5yx-lQu4ivCnAX67voUfBcL?usp=sharing) and put it under `examples/`
+
 <details open><summary>[ Youtube video ]</summary><img src="./figures/case1.jpg" alt="Youtube video" style="width: 100%; height: auto;">
 </details>
 <details open><summary>[ Egocentric video ]</summary><img src="./figures/case3.jpg" alt="Egocentric video" style="width: 100%; height: auto;">
@@ -39,6 +41,12 @@ Please find instructions in [install.md](install.md) to setup environment and da
 ## 📦 Model Zoo
 
 Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
+
+## 🎨 Visualization
+
+If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the predicted json.
+
+![visualization](figures/plot_qvhl.jpg)
 
 ## 🎓 Citation
 If you find our work helps, please cite our paper.
