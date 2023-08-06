@@ -1,7 +1,8 @@
  # UniVTG (ICCV'23)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/univtg-towards-unified-video-language/highlight-detection-on-qvhighlights)](https://paperswithcode.com/sota/highlight-detection-on-qvhighlights?p=univtg-towards-unified-video-language) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/univtg-towards-unified-video-language/moment-retrieval-on-qvhighlights)](https://paperswithcode.com/sota/moment-retrieval-on-qvhighlights?p=univtg-towards-unified-video-language)
 
- [[arXiv]](https://arxiv.org/abs/2307.16715)
+[[arXiv]](https://arxiv.org/abs/2307.16715) <a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/KevinQHLin/UniVTG">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
  
 > TL; DR: The first video temporal grounding pretraining model, unifying diverse temporal annotations to power moment retrieval (interval), highlight detection (curve) and video summarization (point).
 
@@ -9,7 +10,7 @@
 
 ### 📢 News
 <!--  -->
-- [2023.8.6] Update the gradio demo.
+- [2023.8.6] Create the [Huggingface space demo](https://huggingface.co/spaces/KevinQHLin/UniVTG)!
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
 ## 🌟 Run on your videos
