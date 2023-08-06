@@ -3,6 +3,9 @@
 
 [[arXiv]](https://arxiv.org/abs/2307.16715) <a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/KevinQHLin/UniVTG">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
+<a src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" href="https://twitter.com/KevinQHLin/status/1686223119718006784">
+    <img src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" alt="Tweet">
+</a>
  
 > TL; DR: The first video temporal grounding pretraining model, unifying diverse temporal annotations to power moment retrieval (interval), highlight detection (curve) and video summarization (point).
 
