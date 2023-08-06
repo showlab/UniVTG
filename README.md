@@ -19,7 +19,7 @@
 ## 🌟 Run on your video:
 To power practical usage, we release the following checkpoints:
 
-*can be run on a single GPU with less than 4GB memory, highly efficient, less than 1 sec to perform temporal grounding even long video!*
+*can be run on a single GPU with less than 4GB memory, highly efficient, less than 1 sec to perform temporal grounding even long video.*
 
 > 
 | Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Checkpoints |
