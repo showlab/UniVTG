@@ -16,20 +16,20 @@
 - [2023.8.6] Create the [Huggingface space demo](https://huggingface.co/spaces/KevinQHLin/UniVTG)!
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
-## 🌟 Run on your videos
+## 🌟 Run on your video:
 To power practical usage, we release the following checkpoints:
-
+> can be run on a single GPU with less than 4GB memory, highly efficient, less than 1 sec to perform temporal grounding!
+> 
 | Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Checkpoints |
 | ------------------ |  ------------------ | ------------------ | ------- | ---- |
 | CLIP-B/16 | CLIP-B/16 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
 | CLIP-B/16 | CLIP-B/16 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
 
-Download and put it to the dir `results/omni`.
-
-Additionally, we've built gradio interfaces for easy interaction. 
-Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
+Download checkpoint and put it in the dir `results/omni`.
 
 Download the example videos from [here](https://drive.google.com/drive/folders/1TpMYRmdAx5yx-lQu4ivCnAX67voUfBcL?usp=sharing) and put it under `examples/`
+
+Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
 
 <details open><summary>[ Youtube video ]</summary><img src="./figures/case1.jpg" alt="Youtube video" style="width: 100%; height: auto;">
 </details>
