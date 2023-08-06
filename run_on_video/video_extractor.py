@@ -3,15 +3,15 @@ import torch as th
 import math
 import numpy as np
 import torch
-from feature_extractor.video_loader import VideoLoader
+from run_on_video.video_loader import VideoLoader
 from torch.utils.data import DataLoader
 import argparse
-from feature_extractor.preprocessing import Preprocessing
+from run_on_video.preprocessing import Preprocessing
 import torch.nn.functional as F
 from tqdm import tqdm
 import os
 import sys
-from feature_extractor import clip
+from run_on_video import clip
 import argparse
 
 #################################
@@ -36,6 +36,7 @@ def vid2clip(model, vid_path, output_file,
         sampler=None,
     )
     preprocess = Preprocessing()
+    device_id = next(model.parameters()).device
 
     totatl_num_frames = 0
     with th.no_grad():
@@ -57,7 +58,7 @@ def vid2clip(model, vid_path, output_file,
                     for i in range(n_iter):
                         min_ind = i
                         max_ind = (i + 1)
-                        video_batch = video[min_ind:max_ind].cuda()
+                        video_batch = video[min_ind:max_ind].to(device_id)
                         batch_features = model.encode_image(video_batch)
                         vid_features[min_ind:max_ind] = batch_features
                     vid_features = vid_features.cpu().numpy()
@@ -75,11 +76,14 @@ def vid2clip(model, vid_path, output_file,
     print(f"Total number of frames: {totatl_num_frames}")
     return vid_features
 
-def txt2clip(model, text):
-    encoded_texts = clip.tokenize(text).to('cuda')
+def txt2clip(model, text, output_file):
+    device_id = next(model.parameters()).device
+    encoded_texts = clip.tokenize(text).to(device_id)
     text_feature = model.encode_text(encoded_texts)['last_hidden_state']
     valid_lengths = (encoded_texts != 0).sum(1).tolist()[0]
     text_feature = text_feature[0, :valid_lengths].detach().cpu().numpy()
+    
+    np.savez(os.path.join(output_file, 'txt.npz'), features=text_feature)
     return text_feature
     
 if __name__ == "__main__":
