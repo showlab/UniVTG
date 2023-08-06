@@ -44,7 +44,7 @@ Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 
 ## 🎨 Visualization
 
-If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the predicted json.
+If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the prediction json.
 
 ![visualization](figures/plot_qvhl.jpg)
 
