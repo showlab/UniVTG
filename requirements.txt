@@ -125,8 +125,6 @@ jupyter-core==4.11.1
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.3
 kiwisolver==1.4.4
-langchain==0.0.191
-langcodes==3.3.0
 lazy_loader==0.2
 linkify-it-py==2.0.2
 lit==16.0.5.post0
