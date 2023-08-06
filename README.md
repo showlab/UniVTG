@@ -27,10 +27,9 @@ Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
 
 <details open><summary>[ Youtube video ]</summary><img src="./figures/case1.jpg" alt="Youtube video" style="width: 100%; height: auto;">
 </details>
-<details open><summary>[ Charades video  ]</summary><img src="./figures/case2.jpg" alt="Charades video" style="width: 100%; height: auto;">
-</details>
-
 <details open><summary>[ Egocentric video ]</summary><img src="./figures/case3.jpg" alt="Egocentric video" style="width: 100%; height: auto;">
+</details>
+<details open><summary>[ Charades video  ]</summary><img src="./figures/case2.jpg" alt="Charades video" style="width: 100%; height: auto;">
 </details>
 
 ## ⚙️ Preparation
