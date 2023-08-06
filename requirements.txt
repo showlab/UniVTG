@@ -20,7 +20,6 @@ Babel==2.12.1
 backcall==0.2.0
 backoff==2.2.1
 beautifulsoup4==4.11.1
-bert-score==0.3.13
 black==22.3.0
 bleach==5.0.1
 blis==0.7.9
