@@ -190,7 +190,8 @@ with gr.Blocks(css=css) as demo:
 
     with gr.Column(elem_id="col-container"):
         gr.Markdown("""## 🤖️ UniVTG: Towards Unified Video-Language Temporal Grounding
-                    Given a video and text query, return relevant window and highlight.""",
+                    Given a video and text query, return relevant window and highlight.
+                    https://github.com/showlab/UniVTG/""",
                     elem_id="header")
 
         with gr.Row():
