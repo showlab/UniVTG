@@ -213,9 +213,9 @@ with gr.Blocks(css=css) as demo:
 
         examples = gr.Examples(
             examples=[
-                ["./examples/youtube.mp4"], 
+                # ["./examples/youtube.mp4"], 
                 ["./examples/charades.mp4"], 
-                ["./examples/ego4d.mp4"],
+                # ["./examples/ego4d.mp4"],
             ],
             inputs=[video_inp],
         )
