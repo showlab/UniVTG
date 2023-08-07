@@ -85,7 +85,8 @@ def forward(model, save_dir, query):
     src_txt = src_txt.cuda(args.gpu_id)
     src_vid_mask = src_vid_mask.cuda(args.gpu_id)
     src_txt_mask = src_txt_mask.cuda(args.gpu_id)
-    
+
+    model.eval()
     with torch.no_grad():
         output = model(src_vid=src_vid, src_txt=src_txt, src_vid_mask=src_vid_mask, src_txt_mask=src_txt_mask)
     
