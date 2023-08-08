@@ -16,6 +16,11 @@
 - [2023.8.6] Create the [Huggingface space demo](https://huggingface.co/spaces/KevinQHLin/UniVTG)!
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
+### 📝 Todo
+- [ ] Connect UniVTG with LLM e.g., ChatGPT.
+- [ ] Upload all downstream checkpoints.
+- [x] Upload all pretraining checkpoints.
+
 ## 🌟 Run on your video:
 To power practical usage, we release the following checkpoints:
 
