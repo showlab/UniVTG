@@ -73,7 +73,7 @@ Inference: `bash scripts/qvhl_inference.sh`
 
 ## 🎨 Visualization
 
-If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the prediction json.
+If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the prediction jsons (you can download them in [Model Zoo](https://github.com/showlab/UniVTG/blob/main/model.md)).
 
 ![visualization](figures/plot_qvhl.jpg)
 
