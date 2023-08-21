@@ -53,6 +53,22 @@ Please find instructions in [install.md](install.md) to setup environment and da
 
 Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 
+## 🚀 Training & Inference
+### Pretraining (multi-gpu)
+
+Large-scale pretraining: `bash scripts/vlp/aio_unified.sh`
+
+Multi-datasets co-training: `bash scripts/vlp/omni.sh`
+
+### Downstream (single-gpu)
+*Please indicate `--resume` to init model by pretrained weight.*
+
+Training: `bash scripts/qvhl/aio_unified_f10_b10.sh`
+
+*Indicate `--eval_init` and `--eval_epoch=1` for evaluation.*
+
+Inference: `bash scripts/qvhl/aio_unified_f10_b10.sh`
+
 ## 🎨 Visualization
 
 If you want to draw visualizations like our paper, you can simply run `python3 plot/qvhl.py` to generate corresponding figures by providing the prediction json.
