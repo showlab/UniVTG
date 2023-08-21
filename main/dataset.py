@@ -64,94 +64,6 @@ class DatasetVLP(Dataset):
         self.easy_negative_only = easy_negative_only
 
         self.vlp_mapping = {
-            # 'data/qvhighlights/metadata/qvhighlights_asr.jsonl': {  
-            #     'dset_name': 'qvhighlights', 'v_feat_suffix': '', 'q_feat_suffix': '_asr', 'type': 'interval',
-            # },
-            # 'data/ego4d/metadata/point_train_1m.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_1m_0.1p.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_1m_0.2p.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_1m_0.5p.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_1m_0.75p.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_2m.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/ego4d/metadata/point_train_1m_egoclip.jsonl': {     
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
-            # },
-            # 'data/hacs/metadata/hacs_train_cs.jsonl': {    
-            #     'dset_name': 'hacs', 'v_feat_suffix': '', 'q_feat_suffix': '_cs', 'type': 'curve',
-            # },
-            # 'data/hacs/metadata/hacs_train.jsonl': {      
-            #     'dset_name': 'hacs', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/train_300k.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_600k.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_600k_0.1p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_600k_0.2p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_600k_0.5p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_600k_0.75p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/videocc/metadata/train_900k.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
-            # },
-            # 'data/ego4d/metadata/concept_train_top10_window.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/ego4d/metadata/concept_train_top5_window.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/ego4d/metadata/concept_train_top5_window_0.1p.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/ego4d/metadata/concept_train_top5_window_0.2p.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/ego4d/metadata/concept_train_top5_window_0.5p.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/ego4d/metadata/concept_train_top5_window_0.75p.jsonl': {      
-            #     'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top10_window.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top5_window.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top5_window_0.1p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top5_window_0.2p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top5_window_0.5p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            # 'data/videocc/metadata/concept_train_top5_window_0.75p.jsonl': {      
-            #     'dset_name': 'videocc', 'v_feat_suffix': '', 'q_feat_suffix': '_concept', 'type': 'curve',
-            # },
-            #
             # pre-training
             'data/ego4d/metadata/point_egoclip_wo_val.jsonl': {      
                 'dset_name': 'ego4d', 'v_feat_suffix': '_point', 'q_feat_suffix': '_point', 'type': 'point',
@@ -167,7 +79,8 @@ class DatasetVLP(Dataset):
                 'dset_name': 'qvhighlights', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'curve',
             },
             'data/charades/metadata/charades_train.jsonl': {      
-                'dset_name': 'charades', 'v_feat_suffix': '_2', 'q_feat_suffix': '', 'type': 'interval',
+                # 'dset_name': 'charades', 'v_feat_suffix': '_2', 'q_feat_suffix': '', 'type': 'interval',
+                'dset_name': 'charades', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
             },
             'data/ego4d/metadata/nlq_train.jsonl': {
                 'dset_name': 'ego4d', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
@@ -182,6 +95,7 @@ class DatasetVLP(Dataset):
                 'dset_name': 'didemo', 'v_feat_suffix': '', 'q_feat_suffix': '', 'type': 'interval',
             },
         }
+
 
         if "val" in data_path or "test" in data_path:
             assert txt_drop_ratio == 0
