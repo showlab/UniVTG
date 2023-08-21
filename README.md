@@ -56,18 +56,20 @@ Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 ## 🚀 Training & Inference
 ### Pretraining (multi-gpu)
 
-Large-scale pretraining: `bash scripts/vlp/aio_unified.sh`
+Large-scale pretraining: `bash scripts/pretrain.sh`
 
-Multi-datasets co-training: `bash scripts/vlp/omni.sh`
+Multi-datasets co-training: `bash scripts/cotrain.sh`
 
 ### Downstream (single-gpu)
 *Indicate `--resume` to init model by pretraining weight. Refer to our model zoo for detailed parameter settings*
 
-Training: `bash scripts/qvhl/aio_unified_f10_b10.sh`
+Training: `bash scripts/qvhl_pretrain.sh`
 
-*Indicate `--eval_init` and `--eval_epoch=1` for evaluation.*
 
-Inference: `bash scripts/qvhl/aio_unified_f10_b10.sh`
+*Indicate `--eval_init` and `--n_epoch=0` to evaluate selected checkpoint `--resume`.*
+
+Inference: `bash scripts/qvhl_inference.sh`
+
 
 ## 🎨 Visualization
 
