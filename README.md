@@ -18,7 +18,7 @@
 
 ### 📝 Todo
 - [ ] Connect UniVTG with LLM e.g., ChatGPT.
-- [ ] Upload all downstream checkpoints.
+- [x] Upload all downstream checkpoints.
 - [x] Upload all pretraining checkpoints.
 
 ## 🌟 Run on your video:
