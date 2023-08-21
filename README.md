@@ -61,7 +61,7 @@ Large-scale pretraining: `bash scripts/vlp/aio_unified.sh`
 Multi-datasets co-training: `bash scripts/vlp/omni.sh`
 
 ### Downstream (single-gpu)
-*Please indicate `--resume` to init model by pretrained weight.*
+*Indicate `--resume` to init model by pretraining weight. Refer to our model zoo for detailed parameter settings*
 
 Training: `bash scripts/qvhl/aio_unified_f10_b10.sh`
 
