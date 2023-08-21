@@ -16,7 +16,6 @@ from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
 import sys
-sys.path.append('/Users/kevin/univtg')
 from main.config import BaseOptions, setup_model
 from main.dataset import DatasetHL, prepare_batch_inputs_hl, start_end_collate_hl
 from utils.basic_utils import set_seed, AverageMeter, dict_to_markdown, save_json, save_jsonl
