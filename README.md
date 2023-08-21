@@ -13,6 +13,7 @@
 
 ### 📢 News
 <!--  -->
+- [2023.8.22] Code cleaning, add training/inference instruction, upload all downstream checkpoints.
 - [2023.8.6] Create the [Huggingface space demo](https://huggingface.co/spaces/KevinQHLin/UniVTG)!
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
 
