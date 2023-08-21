@@ -15,7 +15,6 @@ import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 
-sys.path.append('/data/home/qinghonglin/univtg')
 from main.config import BaseOptions, setup_model
 from main.dataset import \
     DatasetVLP, start_end_collate_mr, prepare_batch_inputs_mr
