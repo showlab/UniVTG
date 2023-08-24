@@ -100,6 +100,3 @@ This repo is maintained by [Kevin](https://qinghonglin.github.io/). Questions an
 This codebase is based on [moment_detr](https://github.com/jayleicn/moment_detr), [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), [UMT](https://github.com/tencentarc/umt).
 
 We thank the authors for their open-source contributions.
-
-## LICENSE
-MIT
