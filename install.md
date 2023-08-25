@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 ## Datasets
 
-An engineering contribution is that we unify most video temporal tasks by the same features, which makes pre-training or cross-training flexible.
+> An engineering contribution is that we unify most video temporal tasks by the same features, which makes **pre-training** or **cross-training** flexible.
 
 1.  Download the features and metadata for pertaining and downstream datasets. (skip pretraining if not needed)
 
