@@ -37,7 +37,7 @@ Download checkpoint and put it in the dir `results/omni`.
 
 Download the example videos from [here](https://drive.google.com/drive/folders/1TpMYRmdAx5yx-lQu4ivCnAX67voUfBcL?usp=sharing) and put it under `examples/`
 
-Run `python3 main_gradio.py --resume /results/omni/model_best.ckpt`
+Run `python3 main_gradio.py --resume ./results/omni/model_best.ckpt`
 
 <details open><summary>[ Youtube video ]</summary><img src="./figures/case1.jpg" alt="Youtube video" style="width: 100%; height: auto;">
 </details>
