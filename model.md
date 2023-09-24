@@ -1,15 +1,15 @@
 # Model Zoo
 ## Pretraining
-> In paper, we use Slowfast R50 + CLIP-B/16 for pretraining (row 3), and fine-tune on single specified benchmark. We release the row 1, 2 and 4 to power practice usage.
+> In paper, we use Slowfast R50 + CLIP-B/32 for pretraining (row 3), and fine-tune on single specified benchmark. We release the row 1, 2 and 4 to power practice usage.
 
 | Video Enc.  | Text Enc.  | Pretraining            | Fine-tuning   |  Checkpoints |
 | ------------------ |  ------------------ | ------------------ | ------- | ---- |
-| CLIP-B/16 | CLIP-B/16 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
-| CLIP-B/16 | CLIP-B/16 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
-| Slowfast R50 + CLIP-B/16 | CLIP-B/16 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1eWpuTTBRaMoV4UsEteQHAf5t4dU7uwrl?usp=sharing)  |
-| Slowfast R50 + CLIP-B/16 | CLIP-B/16 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1pzHDW82Eja7OeH01AnkWNFsXH8JANnZX?usp=sharing)  
+| CLIP-B/32 | CLIP-B/32 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1-eGata6ZPV0A1BBsZpYyIooos9yjMx2f?usp=sharing)  |
+| CLIP-B/32 | CLIP-B/32 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1l6RyjGuqkzfZryCC6xwTZsvjWaIMVxIO?usp=sharing)  
+| Slowfast R50 + CLIP-B/32 | CLIP-B/32 | 4M      | -      |   [Google Drive](https://drive.google.com/drive/folders/1eWpuTTBRaMoV4UsEteQHAf5t4dU7uwrl?usp=sharing)  |
+| Slowfast R50 + CLIP-B/32 | CLIP-B/32 | 4M | QVHL + Charades + NLQ + TACoS + ActivityNet + DiDeMo      |  [Google Drive](https://drive.google.com/drive/folders/1pzHDW82Eja7OeH01AnkWNFsXH8JANnZX?usp=sharing)  
 
-> For below downstream tasks, checkpoints are trained by Slowfast R50 + CLIP-B/16 features.
+> For below downstream tasks, checkpoints are trained by Slowfast R50 + CLIP-B/32 features.
 
 ## Joint Moment Retrieval and Highlight Detection
 > Please follow the instruction [here](https://github.com/jayleicn/moment_detr/blob/main/standalone_eval/README.md) to submit the test set results to [Codelab](https://codalab.lisn.upsaclay.fr/competitions/6937#results).
