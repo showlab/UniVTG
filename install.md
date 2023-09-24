@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 1.  Download the features and metadata for pertaining and downstream datasets. (skip pretraining if not needed)
 
-| Dataset            | Task    |  Metadata |  Video (Slowfast R50) | Video (CLIP B/16) | Text (CLIP B/16) |
+| Dataset            | Task    |  Metadata |  Video (Slowfast R50) | Video (CLIP B/32) | Text (CLIP B/32) |
 | ------------------ | ------- | ---- | ---- | ---- | ---- | 
 | Point ([Ego4D](https://ego4d-data.org/docs/challenge/))      | PT      | [548 MB](https://drive.google.com/file/d/1c4b9qB8EgULpMQZlowV_Dj-r2BT4gLl7/view?usp=drive_link)     | [27.1 GB](https://drive.google.com/file/d/1J0e52sNaXz-gMmCVyA6LfmgQzlB7BtW6/view?usp=drive_link) | [5.7 GB](https://drive.google.com/file/d/1Ij2gjKAY-yfmvaPatZ0-q4T1zGy-GzGs/view?usp=drive_link) | [30.7 GB](https://drive.google.com/file/d/1Ld8AkOwktsmR9uG1RW7R-eyPozTw8tFm/view?usp=drive_link)
 | Interval ([VideoCC](https://github.com/google-research-datasets/videoCC-data)) | PT      |  [155 MB](https://drive.google.com/file/d/1dDPEplMizTANYs-GAtAdkx1UR69deGtx/view?usp=drive_link)    |  [300 GB](https://drive.google.com/drive/folders/1-xRQ2o8MHcL9JfjPWEu_q14DFEgqLRgS?usp=sharing)  | [62.5 GB](https://drive.google.com/file/d/1J29Nuurp9Eoksm8V6_RZlOa_FZAKzzeM/view?usp=drive_link) | [12.6 GB](https://drive.google.com/file/d/1LZs0T5ssD8AOMVZPSrrcXKDDDmD8ocbl/view?usp=sharing)
@@ -79,5 +79,5 @@ cat vid_slowfast_* > vid_slowfast.tar
    └── ···
    ```
 
-4. (Optional) We extract video features (Slowfast R/50 and CLIP B/16) based on this repo: [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), you can use it extract other benchmarks or videos; We extract text features (CLIP B/16) by `run_on_video/text_extractor.py`
+4. (Optional) We extract video features (Slowfast R/50 and CLIP B/32) based on this repo: [HERO_Video_Feature_Extractor](https://github.com/linjieli222/HERO_Video_Feature_Extractor), you can use it extract other benchmarks or videos; We extract text features (CLIP B/32) by `run_on_video/text_extractor.py`
 
