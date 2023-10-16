@@ -13,6 +13,7 @@
 
 ### 📢 News
 <!--  -->
+- [2023.10.15] Upload the Clip teacher scripts to create scalable pseudo annotations.
 - [2023.8.22] Code cleaning, add training/inference instruction, upload all downstream checkpoints.
 - [2023.8.6] Create the [Huggingface space demo](https://huggingface.co/spaces/KevinQHLin/UniVTG)!
 - [2023.7.31] We release the arXiv paper, codes, checkpoints, and gradio demo.
@@ -70,6 +71,15 @@ Training: `bash scripts/qvhl_pretrain.sh`
 *Indicate `--eval_init` and `--n_epoch=0` to evaluate selected checkpoint `--resume`.*
 
 Inference: `bash scripts/qvhl_inference.sh`
+
+### CLIP teacher to create scalable pseudo labels
+
+Download the openimages v6 class list from `https://storage.googleapis.com/openimages/v6/oidv6-class-descriptions.csv`
+
+Convert it as json by `python3 teacher/csv2json.py`
+
+(Before this, you should have extracted the video features of the video)
+Run the script to generate pseudo labels `python3 teacher/clip2labels.py`
 
 
 ## 🎨 Visualization
