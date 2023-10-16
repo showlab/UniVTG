@@ -74,12 +74,11 @@ Inference: `bash scripts/qvhl_inference.sh`
 
 ### CLIP teacher to create scalable pseudo labels
 
-Download the openimages v6 class list from `https://storage.googleapis.com/openimages/v6/oidv6-class-descriptions.csv`
+1. Download the openimages v6 class list from `https://storage.googleapis.com/openimages/v6/oidv6-class-descriptions.csv`.
 
-Convert it as json by `python3 teacher/csv2json.py`
+2. Convert it as json by `python3 teacher/csv2json.py` then extract the textual class features by `python3 teacher/label2feature.py`
 
-(Before this, you should have extracted the video features of the video)
-Run the script to generate pseudo labels `python3 teacher/clip2labels.py`
+3. (Before this, you should have extracted the video features of the video) Run the script to generate pseudo labels `python3 teacher/clip2labels.py`
 
 
 ## 🎨 Visualization
