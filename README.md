@@ -56,6 +56,7 @@ Please find instructions in [install.md](install.md) to setup environment and da
 Download checkpoints in [model.md](model.md) to reproduce the benchmark results.
 
 ## 🚀 Training & Inference
+> We use slurm for job running, you may need to slightly modify the code to adapt your environment if you do not use slurm system.
 ### Pretraining (multi-gpu)
 
 Large-scale pretraining: `bash scripts/pretrain.sh`
