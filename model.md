@@ -14,21 +14,21 @@
 ## Joint Moment Retrieval and Highlight Detection
 > Please follow the instruction [here](https://github.com/jayleicn/moment_detr/blob/main/standalone_eval/README.md) to submit the test set results to [Codelab](https://codalab.lisn.upsaclay.fr/competitions/6937#results).
 
-| Datasets  | (MR test) mAP avg | (HD test) HIT@1 | (MR val) mAP avg | (HD val) HIT@1 |  Checkpoints + Prediction + Tensorboard Log |
+| Datasets  | (MR test) mAP avg | (HD test) HIT@1 | (MR val) mAP avg | (HD val) HIT@1 |  Checkpoints + Configs + Prediction + Tensorboard Log |
 | ------------------ |  ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | 
 | QVHL |  35.47 | 60.96 |  36.13 | 61.81 | [Google Drive](https://drive.google.com/drive/folders/1EqwZSOVeKBCjcHe6SfeUjxM4fN6xrPf3?usp=drive_link) |
 | QVHL (w/ PT) |  43.63 | 66.28 |  45.44 | 68.77 | [Google Drive](https://drive.google.com/drive/folders/1ms53Lfm__zrzlvBsadIT6b17vUjFhRG7?usp=sharing) |
 
 
 ## Moment Retrieval
-| Datasets  | R1 @ 0.3 | mIoU | Checkpoints + Prediction + Tensorboard Log |
+| Datasets  | R1 @ 0.3 | mIoU | Checkpoints + Configs + Prediction + Tensorboard Log |
 | ------------------ |  ------------------ | ------------------ | ------------------ | 
 | NLQ (w/ PT) |  11.74 | 7.88 | [Google Drive](https://drive.google.com/drive/folders/1u1__kGX2o87kvyh4GiShcEykcVIzDsbs?usp=drive_link) |
 | Charades (w/ PT) |  72.63 | 52.17  | [Google Drive](https://drive.google.com/drive/folders/1xXw0QgJiW7m6lPX1dH-MFXU983IxJiG_?usp=drive_link) |
 | Tacos (w/ PT) | 56.11 | 38.63  | [Google Drive](https://drive.google.com/drive/folders/1EX3XR5D-mcRRgWl5vKy4iVKXZaoLEeJM?usp=drive_link) |
 
 ## Highlight Detection
-| Datasets  | Domain | mAP | Checkpoints + Prediction |
+| Datasets  | Domain | mAP | Checkpoints + Configs + Prediction |
 | ------------------ |  ------------------ | ------------------ | ------------------ | 
 | Youtube (w/ PT) | dog | 74.25 | [Google Drive](https://drive.google.com/drive/folders/1gTYyS0LiTSOS0yZJ9sO_UnGrQO1Xvfe3?usp=drive_link)
 | Youtube (w/ PT) | gymnastics | 78.89 |  [Google Drive](https://drive.google.com/drive/folders/1JqP9UtWVCiBgdEd39dB6LEYUvOnc3_RE?usp=drive_link)
@@ -37,7 +37,7 @@
 | Youtube (w/ PT) | skiing | 75.13 | [Google Drive](https://drive.google.com/drive/folders/1l33mxpj4fUCi6zEp1vumVGrV4WXxZpIa?usp=drive_link)
 | Youtube (w/ PT) | surfing | 83.85 | [Google Drive](https://drive.google.com/drive/folders/12BsF7Do756K8WUxfSJu2O2fVCmGDSsJg?usp=drive_link)
 
-| Datasets  | Domain | mAP | Checkpoints + Prediction + Tensorboard Log |
+| Datasets  | Domain | mAP | Checkpoints + Configs + Prediction + Tensorboard Log |
 | ------------------ |  ------------------ | ------------------ | ------------------ | 
 | TVSum (w/ PT) | BK | 91.78 | [Google Drive](https://drive.google.com/drive/folders/10WDzO7ekh22bk25hYsL6U7tRlXgmwQgp?usp=drive_link)
 | TVSum (w/ PT) | BT | 90.47 | [Google Drive](https://drive.google.com/drive/folders/1rrjgmZuc3RvXpZ-NoHRlQLOs-X6ST2Qh?usp=drive_link)
@@ -52,7 +52,7 @@
 
 
 ## Video Summarization
-| Datasets  | F1 score | Checkpoints + Prediction + Tensorboard Log |
+| Datasets  | F1 score | Checkpoints + Configs + Prediction + Tensorboard Log |
 | ------------------ |  ------------------ | ------------------ | 
 | V1 (w/ PT) |  49.85  | [Google Drive](https://drive.google.com/drive/folders/18_svNtHT-kBsCk4Ca2fRDUCUUg7ab_nR?usp=drive_link)
 | V2 (w/ PT) |  56.97  | 👆
