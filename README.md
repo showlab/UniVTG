@@ -64,7 +64,7 @@ Large-scale pretraining: `bash scripts/pretrain.sh`
 Multi-datasets co-training: `bash scripts/cotrain.sh`
 
 ### Downstream (single-gpu)
-*Indicate `--resume` to init model by pretraining weight. Refer to our model zoo for detailed parameter settings*
+*Indicate `--resume` to init model by pretraining weight. **Refer to our model zoo for detailed parameter settings***
 
 Training: `bash scripts/qvhl_pretrain.sh`
 
