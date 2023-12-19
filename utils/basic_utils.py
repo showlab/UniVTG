@@ -160,7 +160,7 @@ class AverageMeter(object):
 
 def dissect_by_lengths(np_array, lengths, dim=0, assert_equal=True):
     """Dissect an array (N, D) into a list a sub-array,
-    np_array.shape[0] == sum(lengths), Output is a list of nd arrays, singlton dimention is kept"""
+    np_array.shape[0] == sum(lengths), Output is a list of nd arrays, singlton dimension is kept"""
     if assert_equal:
         assert len(np_array) == sum(lengths)
     length_indices = [0, ]
