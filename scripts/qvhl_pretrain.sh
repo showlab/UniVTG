@@ -42,11 +42,11 @@ round_multiple=-1
 hidden_dim=1024
 
 b_loss_coef=10
-g_loss_coef=0
+g_loss_coef=1
 eos_coef=0.1
 f_loss_coef=10
-s_loss_intra_coef=0
-s_loss_inter_coef=0
+s_loss_intra_coef=0.05
+s_loss_inter_coef=0.01
 
 main_metric=MR-full-mAP-key
 nms_thd=0.7
