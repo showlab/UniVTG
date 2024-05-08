@@ -69,7 +69,7 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==0.10.0
 fairscale==0.4.12
-fake-useragent==0.1.14
+fake-useragent==1.2.1
 fastapi==0.98.0
 fastjsonschema==2.16.1
 ffmpeg==1.4
